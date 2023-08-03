@@ -12,6 +12,7 @@ function setup(){
     canvas.center();
     video= createCapture(VIDEO);
     video.size(800, 500);
+    video.hide();
 
     poseNet = ml5.poseNet(video, modelLoaded);
     poseNet.on('pose', gotPoses);
@@ -26,4 +27,20 @@ function gotPoses(results){
         noseY =results[0].pose.nose.y;
         console.log("Nose x = "+ noseX + "Nose y = "+ noseY);
     }
+}
+function draw(){
+    background("#186db6");
+    if(nosex < 400){
+        marioX = marioX-1;
+    }
+    if(noseX>400){
+        marioX = marioX+1;
+    }
+    if(noseY <250){
+        marioY= marioY-1;
+    }
+    if(noseY >250){
+        marioY=marioY+1
+    }
+    image(img, marioX, marioY, 40,70);
 }
