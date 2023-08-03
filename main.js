@@ -7,3 +7,9 @@ marioY = 400;
 function preload(){
     img = loadImage("mario05.png");
 }
+function setup(){
+    createCanvas(800, 500);
+    video= createCapture(VIDEO);
+    video.size(800, 500);
+    
+}
