@@ -18,5 +18,12 @@ function setup(){
 }
 
 function modelLoaded(){
-    console.log("MOdlo carregado!");
+    console.log("Modelo carregado!");
+}
+function gotPoses(results){
+    if(results.length>0){
+        noseX =results[0].pose.nose.x;
+        noseY =results[0].pose.nose.y;
+        console.log("Nose x = "+ noseX + "Nose y = "+ noseY);
+    }
 }
