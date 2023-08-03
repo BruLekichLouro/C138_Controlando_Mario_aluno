@@ -8,10 +8,15 @@ function preload(){
     img = loadImage("mario05.png");
 }
 function setup(){
-    createCanvas(800, 500);
+    canvas = createCanvas(800, 500);
+    canvas.center();
     video= createCapture(VIDEO);
     video.size(800, 500);
 
     poseNet = ml5.poseNet(video, modelLoaded);
     poseNet.on('pose', gotPoses);
+}
+
+function modelLoaded(){
+    console.log("MOdlo carregado!");
 }
