@@ -9,10 +9,11 @@ function preload(){
 }
 function setup(){
     canvas = createCanvas(800, 500);
-    canvas.center();
+    canvas.position(700, 25);
     video= createCapture(VIDEO);
-    video.size(800, 500);
-    video.hide();
+    video.size(600, 500);
+    //image(video, 0, 0, 400, 400);
+  
 
     poseNet = ml5.poseNet(video, modelLoaded);
     poseNet.on('pose', gotPoses);
@@ -30,7 +31,7 @@ function gotPoses(results){
 }
 function draw(){
     background("#186db6");
-    if(nosex < 400){
+    if(noseX < 400){
         marioX = marioX-1;
     }
     if(noseX>400){
