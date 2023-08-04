@@ -1,7 +1,9 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: rgb(240, 117, 117);
+    background-image: url("mario.jpg");
+    background-size: cover;
+    background-position: center;
   }
   .heading{
     width: 90%;
@@ -9,9 +11,13 @@ html, body {
     font-size: 30px;
   }
   .info{
-    width:70%;
-    color: blue;
+    width:80%;
+    height: 80%;
+    color: RGBA( 0, 0, 255, 1 );
     font-size: 22px;
+    background-color: rgb(199, 199, 246, 0.8);
+    border-radius: 20px;
+  
   }
   canvas 
   {
@@ -33,4 +39,3 @@ html, body {
     border-radius:20px;
     box-shadow: 1px 1px 38px rgb(217, 13, 13);
   }
-  
