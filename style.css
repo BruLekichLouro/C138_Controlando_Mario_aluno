@@ -6,8 +6,12 @@ html, body {
   .heading{
     width: 90%;
     border-radius: 20px;
-    
     font-size: 30px;
+  }
+  .info{
+    width:70%;
+    color: blue;
+    font-size: 22px;
   }
   canvas 
   {

@@ -9,11 +9,10 @@ function preload(){
 }
 function setup(){
     canvas = createCanvas(800, 500);
-    canvas.position(700, 25);
+    canvas.position(700, 140);
     video= createCapture(VIDEO);
-    video.position(30, 80s)
+    video.position(30, 200);
   
-
     poseNet = ml5.poseNet(video, modelLoaded);
     poseNet.on('pose', gotPoses);
 }
